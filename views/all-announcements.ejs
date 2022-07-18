@@ -1,0 +1,32 @@
+<%- include("admin-nav") -%>
+<%- include("admin-banner") -%>
+
+<section class="announcements">
+    <div class="container-fluid">
+        <h2>Announcements</h2>
+        <div class="row">
+            <div class="col-md-9">
+                <ul>
+                    <li style="text-align: left;" class="blue-bg">
+                        <% announce.forEach(element =>{ %> 
+                            <%= element.title %>
+                        <span class="left">
+                            <a href="/admin/update-announcement/<%= element.id %>" title="update">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                            <a href="/admin/delete-announcement/<%= element.id %>" title="delete">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
+                        <% }); %>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <%- include("announcement-side-nav") %> 
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include("footer") -%>

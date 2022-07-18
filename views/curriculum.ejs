@@ -1,0 +1,79 @@
+<%- include("header") -%> 
+<!--banner-->
+<section class="banner banner-curriculum">
+    <div class="container-fluid">
+        <div aria-label="breadcrumb " class="breadcrumbs">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item at" aria-current="page">Curriculum</li>
+            </ol>
+        </div>
+        <div class="overlay"></div>
+    </div>
+</section>
+
+
+<!--content-->
+<main>
+  
+    <input id="tab1" type="radio" name="tabs" checked>
+    <label for="tab1">Academics</label>
+      
+    <input id="tab2" type="radio" name="tabs">
+    <label for="tab2">Spiritual</label>
+
+    <input id="tab3" type="radio" name="tabs">
+    <label for="tab3">CLubs & Sports</label>
+      
+    <section id="content1" class="tab-content">
+      <p class="tab-p">
+       The following courses are offered at ZJC level; Maths, Economics, Commerce, Accounts, Combined Science, Geography, Heritage Studies, History, Textile tech and design, Wood tech and design, Food tech and design, Music, Physical Education, BES. 
+      </p>
+      <p class="tab-p">
+        The following courses are offered at O'Level; Literature in English, English language, Family and religious studies, Biology, Physics, Chemistry, Statistics,
+        Maths, Economics, Commerce, Accounts, Combined Science, Geography, Heritage Studies, History, Textile tech and design, Wood tech and design, Food tech and design, Music, Physical Education, BES. 
+       </p>
+       <p class="tab-p">
+        The following courses are offered at A'Level; F.R.S, Biology, Chem, Physics, B.E.S, Textile tech and design, History, Ndebele, Shona, Maths, Statistics, Accounting, Economics, Sociology and Literature in English.
+       </p>
+    </section>
+      
+    <section id="content2" class="tab-content">
+      <p class="tab-p">
+         The students are grouped into 2 groups according to their classes, form 1 to 3 are pathfinders and form 4 to 6 are ambassadors. There is also an Adventist Youth Society, Church choir and Master Guide.
+      </p>
+      
+    </section>
+
+    <section id="content3" class="tab-content">
+      <p class="tab-p">
+        The school has the following sporting clubs; Soccer, Basketball, Handball, Netball, Volleyball, Chess and Athletics.
+      </p>
+      <p class="tab-p">The school also has the following student run clubs.</p>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <% //clubs.forEach(element => { %>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed bg-muted" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Young Farmer's club.
+              <%= //element.name; %> 
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <p style="color: black;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur accusamus porro recusandae hic illo maiores enim earum maxime. Amet modi odio quaerat quo voluptates corrupti deleniti sint? Officiis, ratione voluptatum!
+                    <%= //element.description; %>
+                </p>
+                <p style="color: black;">
+                    Subscription: $10<%= //element.subscription; %>
+                </p>
+            </div>
+          </div>
+        </div>
+        <% //}) %>
+      </div>
+    </section>
+  </main>
+
+<%- include("footer") -%> 

@@ -1,0 +1,112 @@
+<%- include("header") -%>
+
+<!-- Hero Section-->
+<section class="hero">
+    <div class="container-fluid overlay">
+        <div class="hero-text">
+            <h1>Lower Gwelo Adventist High School</h1>
+            <p>Our curriculum seeks to educate the <span>head</span>, the <span>heart</span> and the <span>hands</span>.
+            </p>
+            <a href="/about" class="rounded-navy">
+                Read more
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- Hero Section-->
+
+<!--Announcements Section-->
+<section class="announcements">
+    <div class="container-fluid">
+        <h2 class="headings">Announcements</h2>
+        <ul>
+            <li class="blue-bg">
+                <%// announce.forEach(element =>{ %>
+                <a href="/announcement/<%= //element.id; %>">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <%=// element.title; %>
+                    <br>
+                    <%= //String(element.date_modified).substr(0,15); %>
+                </a>
+                <%// }); %>
+            </li>
+        </ul>
+    </div>
+</section>
+<!--Announcements Section-->
+
+<!--Latest News Section-->
+<section class="latest-news">
+    <div class="container-fluid">
+        <h2 class="headings">Latest news </h2>
+        <hr>
+        <div class="row content">
+            <div class=" col-md-3">
+                <div class="news-image">
+                    <img src="images/news.jpg" alt="news image">
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="news-info">
+                    <h5 class="news-title">Here goes the title</h5>
+                    <p class="news-content">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut at unde quo iste
+                        exercitationem molestiae sit, fuga esse impedit quam fugit et doloremque. Officiis quisquam
+                        esse id explicabo nemo nostrum?
+                    </p>
+                    <a href="#">
+                        Read more
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+</section>
+<!--Latest News Section-->
+
+<!--Gallery Section-->
+<section class="gallery">
+    <div class="container-fluid">
+        <h2 class="headings">Gallery</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="gallery-img">
+                    <a href="images/news.jpg" data-lightbox="image-1" data-title="My caption">
+                        <img src="images/news.jpg" alt="image">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="gallery-img">
+                    <a href="images/news.jpg" data-lightbox="image-1" data-title="My caption">
+                        <img src="images/news.jpg" alt="image">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="gallery-img">
+                    <a href="images/news.jpg" data-lightbox="image-1" data-title="My caption">
+                        <img src="images/news.jpg" alt="image">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="gallery-img">
+                    <a href="images/news.jpg" data-lightbox="image-1" data-title="My caption">
+                        <img src="images/news.jpg" alt="image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="load">
+        <a href="#" class=" gallery-btn"> Load more</a>
+    </div>
+</section>
+<!--Gallery Section-->
+
+<%- include("footer") -%>

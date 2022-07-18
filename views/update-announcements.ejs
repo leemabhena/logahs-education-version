@@ -1,0 +1,18 @@
+<%- include("admin-nav") -%>
+<%- include("admin-banner") -%>
+
+<div class="container">
+    <h4>Update Announcement</h4>
+    <form action="/admin/update-announcement/<%= announcement[0].id; %>" method="post">
+        <input type="text" name="title" id="title" required class="form-control" value="<%= announcement[0].title; %> ">
+        <br>
+        <textarea name="content" id="content" class="form-control" required><%= announcement[0].content; %>
+        </textarea>
+        <br>
+        <button type="submit" class="btn-outline-navy" style="margin-bottom: 50px;">
+            <i class="fa-solid fa-paper-plane"></i> Update
+        </button>
+    </form>
+</div>
+
+<%- include("footer") -%>

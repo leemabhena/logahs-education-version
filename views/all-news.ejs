@@ -1,0 +1,42 @@
+<%- include("admin-nav") -%>
+<%- include("admin-banner") -%>
+
+<section class="announcements">
+    <div class="container-fluid">
+        <h2>Latest News</h2>
+        <div class="row">
+            <div class="col-md-9">
+            <hr>
+            <% news.forEach(element => { %>
+            <div class="row content">
+                <div class=" col-md-3">
+                    <div class="news-image">
+                        <img src="/uploads/<%=element.image; %>" alt="news image">
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="news-info">
+                        <h5 class="news-title"><%=element.title;%></h5>
+                        <p class="news-content">
+                            <%=element.content.substr(0, 30) + " ....."%>
+                        </p>
+                        <a href="/admin/update-news/<%= element.id %>" title="update">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
+                        &nbsp;
+                        <a href="/admin/delete-news/<%= element.id %>" title="delete">
+                            <i class="fa-solid fa-trash"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <% }) %>
+        </div>
+        <div class="col-md-3">
+            <%- include("announcement-side-nav") %> 
+        </div>
+    </div>
+</section>
+
+<%- include("footer") -%>

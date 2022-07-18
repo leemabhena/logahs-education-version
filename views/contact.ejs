@@ -1,0 +1,47 @@
+<%- include("header") -%> 
+
+<!--banner-->
+
+<section class="banner banner-contact">
+    <div class="container-fluid">
+        <div aria-label="breadcrumb " class="breadcrumbs">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item at" aria-current="page">Contact Us</li>
+            </ol>
+        </div>
+        <div class="overlay"></div>
+    </div>
+</section>
+
+<section class="details">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="contact">
+                    <h4 class="headings">Contact us</h4>
+                    <form action="" class="contact-form">
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required class="form-control">
+                        <input type="email" name="email" id="email" placeholder="Email" required class="form-control">
+                        <textarea name="message" id="message" class="form-control">Message</textarea>
+                        <button type="submit" class="btn-outline-navy"> 
+                            <i class="fa-solid fa-paper-plane"></i> Send</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-details">
+                    <h6>Contact Details</h6>
+                    <p><i class="fa-solid fa-square-phone"></i> 07748895840</p>
+                    <p><i class="fa-solid fa-envelope-circle-check"></i> logahs@logahs.edu</p>
+                    <p>P Bag 9002 </p>
+                    <p>Gweru</p>
+                    <p>Zimbabwe</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<%- include("footer") -%> 
