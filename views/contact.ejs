@@ -1,47 +1,72 @@
 <%- include("header") -%> 
 
-<!--banner-->
-
-<section class="banner banner-contact">
-    <div class="container-fluid">
-        <div aria-label="breadcrumb " class="breadcrumbs">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="/">Home</a></li>
-              <li class="breadcrumb-item at" aria-current="page">Contact Us</li>
-            </ol>
+<section class="contact-section">
+        <div class="contact-info">
+            <h4 class="contact-heading">Get in touch</h4>
+                <form action="" method="post">
+                    <input type="text" name="subject" required placeholder="Subject">
+                    <input type="email" name="email" required placeholder="Email">
+                    <textarea name="message" cols="30" rows="5">Message</textarea>
+                    <button type="submit">
+                        <i class="fa fa-envelope"></i>
+                        Send
+                    </button>
+                </form>
         </div>
-        <div class="overlay"></div>
-    </div>
+    <div class="navy-gradient"></div>
+   
 </section>
 
-<section class="details">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="contact">
-                    <h4 class="headings">Contact us</h4>
-                    <form action="" class="contact-form">
-                        <input type="text" name="subject" id="subject" placeholder="Subject" required class="form-control">
-                        <input type="email" name="email" id="email" placeholder="Email" required class="form-control">
-                        <textarea name="message" id="message" class="form-control">Message</textarea>
-                        <button type="submit" class="btn-outline-navy"> 
-                            <i class="fa-solid fa-paper-plane"></i> Send</button>
-                    </form>
+<section class="contact-circle">
+    <div class="contact-details">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="contact-item">
+                        <div class="rounded">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <p>
+                            Lower Gwelo High School <br>
+                           <span class="address-hidden">
+                                P-Bag 9002 <br>
+                                Gweru
+                            </span> 
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="contact-details">
-                    <h6>Contact Details</h6>
-                    <p><i class="fa-solid fa-square-phone"></i> 07748895840</p>
-                    <p><i class="fa-solid fa-envelope-circle-check"></i> logahs@logahs.edu</p>
-                    <p>P Bag 9002 </p>
-                    <p>Gweru</p>
-                    <p>Zimbabwe</p>
+                <div class="col-md-3">
+                    <div class="contact-item">
+                        <div class="rounded">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <p>
+                            0774123789
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="contact-item">
+                        <div class="rounded">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <p>
+                           lowergwelohighschool@gmail.com
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="contact-item">
+                        <div class="rounded">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <p>
+                            logahs.ac.zw
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-
 <%- include("footer") -%> 

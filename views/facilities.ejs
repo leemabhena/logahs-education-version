@@ -1,25 +1,67 @@
 <%- include("header") -%> 
 
 <!--Facilities-->
-<section class="banner banner-facilities">
-    <div class="container-fluid">
-        <div aria-label="breadcrumb " class="breadcrumbs">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="/">Home</a></li>
-              <li class="breadcrumb-item at" aria-current="page">Facilities</li>
-            </ol>
-        </div>
-        <div class="overlay"></div>
+<div class="hero-facilities">
+  <div class="row facilities-hero-container">
+    <div class="col-md-6 facilities-hero-text">
+        <h1>
+          We offer boarding facilities to students from form 1 to form 6.
+        </h1>
+      </div>
+    <div class="col-md-6 facilities-hero-img">
+      <img style="z-index: 100;" src="images/about.jpeg" alt="about hero image" class="about-img">
     </div>
-</section>
+  </div>
+  <div aria-label="breadcrumb " class="breadcrumbs">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item at" aria-current="page">Facilities</li>
+    </ol>
+</div>
+<div class="overlay"></div>
+</div>
+
 
 <!--content-->
-<main>
+<section class="facilities-body-container">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="images/learning-facilities.jpg" alt="classroom">
+    </div>
+    <div class="col-md-9">
+      <h2>
+        Learning facilities
+      </h2>
+      <p>
+        Lower Gwelo high school has the following learning facilities.
+        1 School hall, 
+        1 Dining hall, 
+        1 Library, 
+        5 Science libraries, 
+        1 Lecture theatre, 
+        21 Classrooms, 
+        4 Specialist rooms for home economics, 
+        2 Computer labs, 
+        1 Boardroom, 
+        1 Staff room, 
+        1 Basketball court, 
+        1 Volleyball pitch, 
+        2 Soccer pitches, 
+        1 Netball court, 
+        1 Swimming pool (Dysfunctional) and 
+        1 Agric shade.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- <main>
   
-    <input id="tab1" type="radio" name="tabs" checked>
+    <input id="tab1" type="radio" name="tabs" checked class="hidden">
     <label for="tab1">Learning Facilities</label>
       
-    <input id="tab2" type="radio" name="tabs">
+    <input id="tab2" type="radio" name="tabs" class="hidden">
     <label for="tab2">Boarding Facilities</label>
       
     <section id="content1" class="tab-content">
@@ -53,6 +95,6 @@
       </p>
       
     </section>
-  </main>
+  </main> -->
 
 <%- include("footer") -%> 

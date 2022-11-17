@@ -30,6 +30,8 @@ nav {
     background: var(--navy);
     background: linear-gradient(90deg, rgba(222,222,222,1) 0%, rgba(33,21,114,1) 44%);
     padding: 0 20px;
+    box-shadow: 3px 1px 5px rgba(0,0,0,0.87);
+    transition: all ease-in-out 1s;
 }
 
 ul {
@@ -66,10 +68,11 @@ button {
     border: 0;
     padding: 6px 12px;
     margin: 10px 0;
+    cursor: pointer;
 }
 
 button:active, button:focus{
-    outline: none;
+    outline: none !important;
 }
 
 input, textarea {
@@ -79,6 +82,9 @@ input, textarea {
 .space {
     padding: 20px;
 }
+
+
+
 /* navigation */
 
 .nav-link{
@@ -89,9 +95,22 @@ input, textarea {
     color: var(--bright) !important;
 }
 
-.navbar-toggler:focus{
-    outline: 0;
-    border: 0;
+.navbar-toggler, .navbar-toggler:active{
+    outline: 0 !important;
+    border: 0 !important;
+}
+
+.scroll {
+    background: var(--navy);
+    min-height: 40px;
+    height: 40px;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.scroll .logo {
+    display: none;
 }
 
 .navbar-toggler i {
@@ -100,6 +119,7 @@ input, textarea {
 
 .navbar-brand{
     text-shadow: 2px 2px 3px rgba(44,31,102,0.87);
+    color: var(--muted);
 }
 
 .navbar-brand:hover{
@@ -122,7 +142,7 @@ input, textarea {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0,0,0,.5);
     top: 0;
     left: 0;
     z-index: 10;
@@ -138,19 +158,12 @@ input, textarea {
     width: 50%; 
     color: var(--muted);
 }
-/*
-.hero-text a {
-    background-color: var(--navy);
-    padding: 6px 12px;
-    border-radius: 3px;
-    color: var(--muted);
-}
-*/
+
 .hero h1{
     color: var(--muted);
 }
 
-.hero span{
+.gold-highlight{
     color: var(--bright);
     text-decoration: underline;
 }
@@ -170,12 +183,28 @@ input, textarea {
 }
 
 @media (max-width:767px){
+    .hero {
+        background-attachment: scroll;
+        margin: 0;
+        background-position: center;
+        height: 60vh;
+        line-height: 2;
+    }
+
     .hero-text{
-        top: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        padding: 10px;
+        text-align: center;
     }
 
     .hero-text p{
         width: 100%;
+    }
+
+    .big {
+        display: none;
     }
 }
 
@@ -209,6 +238,7 @@ input, textarea {
     background-clip: text;
     -webkit-background-clip: text;
 }
+
 
 /* latest news */
 .latest-news {
@@ -255,13 +285,13 @@ input, textarea {
 .news-title {
     text-decoration: underline;
     font-variant: small-caps;
-    text-shadow: 1px 1px 5px rgba(44,31,102,0.87);
     cursor: pointer;
 }
 
 @media (max-width:767px) {
     .news-info {
         text-align: center;
+        margin-top: 15px;
     }
 }
 
@@ -359,10 +389,6 @@ footer h6{
     padding: var(--overall-padding);
 }
 
-.banner-about{
-    background-image: url(../images/about.jpeg);
-}
-
 .banner-curriculum {
     background-image: url(../images/church.jpeg);
 }
@@ -375,9 +401,6 @@ footer h6{
     background-image: url(../images/enrollment.jpeg);
 }
 
-.banner-contact {
-    background-image: url(../images/contact.jpeg);
-}
 
 .breadcrumbs{
     position: absolute;
@@ -393,7 +416,97 @@ footer h6{
     color: var(--bright);
 }
 
+@media (max-width:767px){
+    .banner {
+        margin: 0;
+        background-position: center;
+        background-attachment: scroll;
+    }
+}
+
+/* About */
+
+.hero-about {
+    height: 80vh;
+    background-color: var(--navy);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.about-hero-text {
+    transform: translateY(40%);
+    padding-left: 2rem;
+}
+
+.about-hero-text h1 {
+    color: var(--muted);
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 90%;
+}
+
+.about-hero-text p {
+    color: var(--bright);
+    font-family: 'Libre Baskerville', serif;;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+
+.circle-sda-logo img {
+    height: 3rem;
+    width: 3rem;
+}
+
+.circle-sda-logo {
+    height: 3.5rem;
+    width: 3.5rem;
+    margin: 0 auto;
+    transform: translateX(-2rem);
+}
+
+
+@media (max-width:767px) {
+    .about-hero-text {
+        transform: translateY(0%);
+        text-align: center;
+    }
+
+    .about-hero-text h1 {
+        margin-top: 3rem;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .hide-sm {
+        display: none;
+    }
+}
+
+/* About */
+
 /* facilities */
+
+.hero-facilities {
+    display: flex;
+    align-items: center;
+    background-image: url(../images/facilities-bg.jpg);
+    height: 80vh;
+    overflow-x: hidden;
+    padding: 0 3rem;
+    position: relative;
+}
+
+.facilities-hero-text h1 {
+    color: black;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+
 .list-circle{
     list-style-type: circle;
 }
@@ -411,45 +524,148 @@ footer h6{
     color: var(--navy);
 }
 
-.side-nav {
-    padding: 10px 0 0 10px;
-    border-left: 2px solid var(--bright);
-    position: sticky;
-    top: 20px;
+/* curriculum */
+
+.circle-img{
+    height: 6rem;
+    width: 6rem;
+    text-align: center;
+    margin: 0 auto;
 }
 
+.circle-img img {
+    height: 100%;
+    width: 100%;
+}
 
-.side-nav-btn {
+/* contact */
+
+.contact-section {
+    background-image: url(../images/contact.jpg);
+    background-position: center;
+    height: 80vh;
+    position: relative;
+    z-index: -10;
+}
+
+.navy-gradient {
+    background-color: rgba(10, 4, 53, 0.9);
     position: absolute;
-    top: 10px;
-    right: 15px;
-}
-/* should make side nav sticky and offcanvas if its small */
-.side-nav ul li a {
-    color: var(--navy);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -9;
 }
 
-.side-nav ul li.active a{
-    color: var(--bright);
+.contact-info {
+    padding: 20px;
+    border: 2px solid var(--muted);
+    border-radius: 2px;
+    text-align: center;
+    width: 40vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.offcanvas-lg {
-    background-color: var(--muted);
+@media (max-width:767px){
+    .contact-info {
+        width: 90%;
+    }
+
+    .address-hidden {
+        display: inline;
+    }
 }
 
-.offcanvas-lg li a{
-    color: var(--navy);
-}
-
-.contact-form .form-control{
-    margin: 10px 0;
-    outline: none;
-}
-
-.form-control:active .form-control:focus {
-    outline: none !important;
+.contact-info input {
+    background-color: transparent;
     border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: white;
 }
+
+.contact-info input::placeholder {
+    color: white;
+}
+
+.contact-info textarea {
+    color: white;
+    display: block;
+    width: 100%;
+    border: 2px solid #fff;
+    text-align: center;
+    outline: none;
+    background-color: transparent;
+}
+
+.contact-info button {
+    background-color: transparent;
+    color: var(--muted);
+    border: 2px solid var(--muted);
+    transition: ease .5s;
+}
+
+.contact-info button:hover {
+    color: red;
+}
+
+.contact-heading {
+    color: white;
+}
+
+.rounded {
+    color: var(--navy);
+    border-radius: 50% !important;
+    border: 2px solid var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto;
+    width: 40px;
+    height: 40px;
+}
+
+.contact-item {
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+    transition: ease-in 0.5s;
+    margin: 1px 0;
+
+}
+
+.contact-item:hover {
+    background-color: var(--navy);
+}
+
+.contact-item:hover .rounded {
+    color: var(--muted);
+    border: 2px solid var(--muted);
+}
+
+.contact-item:hover p { 
+    color: var(--muted);
+}
+
+.contact-item:hover .address-hidden {
+    display: inline;
+}
+
+.contact-item p {
+    color: var(--navy);
+}
+
+.address-hidden {
+    display: none;
+}
+
 
 /* staff */
 .hod {
@@ -500,13 +716,24 @@ main {
   background: #fff;
 }
 
+@media (max-width:767px){
+    main {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .list-circle {
+        margin-left: 20px;
+    }
+}
+
 .tab-content{
   display: none;
   padding: 20px 0 0;
   border-top: 1px solid #ddd;
 }
 
-input {
+.hidden{
   display: none;
 }
 
@@ -542,6 +769,7 @@ label[for*='3']:before {
 label[for*='4']:before {
   content: '\f1a9';
 }
+
 
 label:hover {
   color: #FFC300;

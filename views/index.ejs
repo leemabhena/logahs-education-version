@@ -5,7 +5,12 @@
     <div class="container-fluid overlay">
         <div class="hero-text">
             <h1>Lower Gwelo Adventist High School</h1>
-            <p>Our curriculum seeks to educate the <span>head</span>, the <span>heart</span> and the <span>hands</span>.
+            <p>
+                <span class="big">
+                    This is a <span class="gold-highlight">Seventh-day Adventist school</span> built in <span  class="gold-highlight">1902</span>. Logahs is located 33km 
+                    from the city of Gweru in the Midlands province in Zimbabwe. It enrolls students from form one to six.
+                </span>
+                Our curriculum seeks to educate the <span class="gold-highlight">head</span>, the <span class="gold-highlight">heart</span> and the <span class="gold-highlight">hands</span>.
             </p>
             <a href="/about" class="rounded-navy">
                 Read more
@@ -31,6 +36,17 @@
                 </a>
                 <%// }); %>
             </li>
+
+            <li class="blue-bg">
+                <%// announce.forEach(element =>{ %>
+                <a href="/announcement/<%= //element.id; %>">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <%=// element.title; %>
+                    <br>
+                    <%= //String(element.date_modified).substr(0,15); %>
+                </a>
+                <%// }); %>
+            </li>
         </ul>
     </div>
 </section>
@@ -40,6 +56,28 @@
 <section class="latest-news">
     <div class="container-fluid">
         <h2 class="headings">Latest news </h2>
+        <hr>
+        <div class="row content">
+            <div class=" col-md-3">
+                <div class="news-image">
+                    <img src="images/news.jpg" alt="news image">
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="news-info">
+                    <h5 class="news-title">Here goes the title</h5>
+                    <p class="news-content">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut at unde quo iste
+                        exercitationem molestiae sit, fuga esse impedit quam fugit et doloremque. Officiis quisquam
+                        esse id explicabo nemo nostrum?
+                    </p>
+                    <a href="#">
+                        Read more
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
         <hr>
         <div class="row content">
             <div class=" col-md-3">

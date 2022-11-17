@@ -1,27 +1,45 @@
 <%- include("header") -%> 
 <!--banner-->
-<div class="banner banner-about">
-    <div class="container-fluid">
-        <div aria-label="breadcrumb " class="breadcrumbs">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="/">Home</a></li>
-              <li class="breadcrumb-item at" aria-current="page">About Us</li>
-            </ol>
+<div class="hero-about">
+  <div class="row">
+    <div class="col-md-6 about-hero-text">
+        <h1>
+          Welcome to Lower Gwelo Adventist High School. 
+          <span class="hide-sm">
+            We are a Seventh-day
+            Adventist school based in Gweru offering Ordinary Level & Advanced Level
+            studies.
+          </span>
+        </h1>
+        <p>Here's what you need to know about Lower Gwelo High School</p>
+        <div class="circle-sda-logo">
+          <img src="images/sda-logo.png" alt="sda logo" >
         </div>
-        <div class="overlay"></div>
+      </div>
+    <div class="col-md-6 about-hero-img">
+      <img src="images/about.jpeg" alt="about hero image" class="about-img">
     </div>
+  </div>
+  <div class="container-fluid">
+    <div aria-label="breadcrumb " class="breadcrumbs">
+      <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item at" aria-current="page">About Us</li>
+      </ol>
+  </div>
+  </div>
 </div>
 
 <!--content-->
-<main>
+<main style="margin-top: 30px ;">
   
-    <input id="tab1" type="radio" name="tabs" checked>
+    <input id="tab1" type="radio" name="tabs" checked class="hidden">
     <label for="tab1">History</label>
       
-    <input id="tab2" type="radio" name="tabs">
+    <input id="tab2" type="radio" name="tabs" class="hidden">
     <label for="tab2">Principal</label>
       
-    <input id="tab3" type="radio" name="tabs">
+    <input id="tab3" type="radio" name="tabs" class="hidden">
     <label for="tab3">Staff</label>
       
     <section id="content1" class="tab-content">
